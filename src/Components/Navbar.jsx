@@ -27,7 +27,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-
+                {/* search box */}
                 <form className="d-flex">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                     <button className="btn btn-sm btn-outline-secondary" type="submit">Search</button>
