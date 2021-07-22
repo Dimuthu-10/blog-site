@@ -1,0 +1,22 @@
+{
+    "blogs" : [
+        {
+            "title": "Dimuthu Blog", 
+            "body":"this is the blog body of the first blog", 
+            "author": "Dimuthu", 
+            "id":1
+        },
+        {
+            "title": "Lakshan Blog", 
+            "body":"this is the blog body of the Second blog", 
+            "author": "Lakshan" ,
+            "id":2
+        },
+        {
+            "title": "Ashen Blog", 
+            "body":"this is the blog body of the Third blog",
+            "author": "Ashen", 
+            "id":3
+        }
+    ]
+}
