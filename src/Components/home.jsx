@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import BlogItems from './blog-item';
 
 const Home = () => {
 
@@ -11,16 +12,7 @@ const Home = () => {
    
     return ( 
         <div className="container">
-           {blog.map((blogs) => (
-               <div className="blog-item" key={blogs.id}>
-                   <ul className="list-group list-group-flush">
-                       <li className=" item list-group-item    m-1 ">
-                            <h2 className='header'>{ blogs.title }</h2>
-                            <p>Written by { blogs.author } </p>
-                       </li>
-                   </ul>
-               </div>
-           ))}
+           <BlogItems blog={ blog } title='All Blogs'/>
         </div>
      );
 }
