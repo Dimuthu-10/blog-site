@@ -4,7 +4,7 @@ import Image from "/Software_root/React/blog/src/Img/datamob.png"
 const Navbar = () => {
     return ( 
        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-           <div className="container">
+           <div className="container-fluid">
                {/* brand name and Icon */}
                 <a className="navbar-brand " href="/">
                     <img src={Image} alt="datamob" width="50" height="50"/>
@@ -23,7 +23,7 @@ const Navbar = () => {
                             <a className="nav-link " aria-current="page" href="/">Home</a>
                         </li>
                         <li className="nav-item" >
-                            <a className="nav-link " aria-current="page" href="/">Write</a>
+                            <a className="nav-link " aria-current="page" href="/newBlog">Write</a>
                         </li>
                     </ul>
                 </div>
