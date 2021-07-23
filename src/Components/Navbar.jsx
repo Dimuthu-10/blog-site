@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "/Software_root/React/blog/src/Img/datamob.png"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return ( 
@@ -17,21 +18,21 @@ const Navbar = () => {
                 </button>
 
                 {/* nav Items */}
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item" >
-                            <a className="nav-link " aria-current="page" href="/">Home</a>
+                <div className="collapse navbar-collapse  " id="navbarNav">
+                    <ul className="navbar-nav ">
+                        <li className="nav-item " >
+                            <Link className="nav-link " to="/">Home</Link>
                         </li>
-                        <li className="nav-item" >
-                            <a className="nav-link " aria-current="page" href="/newBlog">Write</a>
+                        <li className="nav-item " >
+                            <Link className="nav-link " to="/newBlog">Write</Link>
                         </li>
                     </ul>
                 </div>
                 {/* search box */}
-                <form className="d-flex">
+                {/* <form className="d-flex">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                     <button className="btn btn-sm btn-outline-secondary" type="submit">Search</button>
-                </form>
+                </form> */}
            </div>
            
        </nav>
