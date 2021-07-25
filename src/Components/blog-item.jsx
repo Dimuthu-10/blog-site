@@ -10,7 +10,7 @@ const BlogItems = ({ blog, title }) => {
             <div className="blog-item" key={blogs.id}>
                 <ul className="list-group list-group-flush">
                     <li className="item list-group-item rounded   m-1 ">
-                        <Link to={`/blogs/ ${blogs.id} `}>
+                        <Link to={`/blogs/${blogs.id} `}>
                             <h2 className='header'>{ blogs.title }</h2>
                             <p>Written by { blogs.author } </p>
                         </Link>
