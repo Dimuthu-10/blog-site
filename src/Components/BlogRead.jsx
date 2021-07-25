@@ -4,18 +4,18 @@ import UseFetch from "./useFetch";
 const BlogRead = () => {
 
     const { id } = useParams();
-    const { data: blog, error , pending} = UseFetch(`http://localhost:8000/blogs/${id}`);
+    const { data, error , pending} = UseFetch(`http://localhost:8000/blogs/${id}`);
 
     return ( 
         <div>
             <h2>This is a body of { id } blog</h2>
             { pending && <div>Loading...</div> }
             { error && <div> { error } </div>}
-            { blog && (
+            { data && (
                 <article>
-                    <h2> { blog.title } </h2>
-                    <div> { blog.body } </div>
-                    <p>Written by { blog.author } </p>
+                    <h2> { data.title } </h2>
+                    <div> { data.body } </div>
+                    <p>Written by { data.author } </p>
                 </article>
             )}
         </div>
