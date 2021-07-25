@@ -14,7 +14,7 @@ const useFetch = (url) => {
         fetch(url,{ signal:abrt.signal })
             .then(res => {
                 if (!res.ok){
-                    throw Error ('');
+                    throw Error ('could not fetch data correctly');
                 }
                 return res.json();
             })
