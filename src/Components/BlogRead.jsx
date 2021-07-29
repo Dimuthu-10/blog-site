@@ -8,7 +8,6 @@ const BlogRead = () => {
 
     return ( 
         <div>
-            <h2>This is a body of { id } blog</h2>
             { pending && <div>Loading...</div> }
             { error && <div> { error } </div>}
             { data && (
