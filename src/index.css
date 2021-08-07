@@ -46,4 +46,5 @@ code {
 
 .create button{
   cursor: pointer;
+  margin: 1rem;
 }
