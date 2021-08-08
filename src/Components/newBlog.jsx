@@ -6,10 +6,17 @@ const NewBlog = () => {
     const [content, SetContent] = useState('');
     const [author, SetAuthor] = useState('');
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const blog = { title, content, author };
+
+        console.log(blog);
+    }
     return ( 
         <div className="create container-lg">
             <div className="row">
-                <form>
+                <form onSubmit={handleSubmit} >
                     <div className="form-group mb-3 k">
                         <label className="title form-label p-2 " htmlFor="Title">Title</label>
                         <input 
@@ -39,7 +46,7 @@ const NewBlog = () => {
                             value = {author}
                             onChange = {(e) => SetAuthor(e.target.value) }
                         >
-                            <option disabled selected>Choose Author</option>
+                            <option disabled defaultChecked>Choose Author</option>
                             <option value="Dimuthu">Dimuthu</option>
                             <option value="Ashen">Ashen</option>
                         </select>
