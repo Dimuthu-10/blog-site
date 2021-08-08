@@ -17,7 +17,8 @@ code {
 }
 
 .blog-item:hover{
-  box-shadow: 1px 1px 1px 1px rgb(8, 10, 31) ;
+  box-shadow: 1px 1px 1px 1px rgb(0, 7, 85) ;
+  border-radius: 15px;
 }
 .item a{
   text-decoration: none;
