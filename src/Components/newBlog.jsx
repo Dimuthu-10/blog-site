@@ -3,15 +3,22 @@ import { useState } from "react";
 const NewBlog = () => {
 
     const [title, SetTitle] = useState('');
-    const [content, SetContent] = useState('');
-    const [author, SetAuthor] = useState('');
+    const [body, SetBody] = useState('');
+    const [author, SetAuthor] = useState('Dimuthu');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const blog = { title, content, author };
+        const blog = { title, body, author };
 
-        console.log(blog);
+        fetch('http://localhost:8000/blogs',{
+            method : 'POST',
+            headers : {"Content-type":"application/Json"},
+            body : JSON.stringify(blog)
+        })
+        .then(() =>{
+            console.log('data added successfully.');
+        })
     }
     return ( 
         <div className="create container-lg">
@@ -34,8 +41,8 @@ const NewBlog = () => {
                             className="field form-control" 
                             name="content" 
                             required cols="30" rows="7"
-                            value = {content}
-                            onChange = {(e) => SetContent(e.target.value)}
+                            value = {body}
+                            onChange = {(e) => SetBody(e.target.value)}
                         ></textarea>
                     </div>
 
@@ -46,7 +53,6 @@ const NewBlog = () => {
                             value = {author}
                             onChange = {(e) => SetAuthor(e.target.value) }
                         >
-                            <option disabled defaultChecked>Choose Author</option>
                             <option value="Dimuthu">Dimuthu</option>
                             <option value="Ashen">Ashen</option>
                         </select>
