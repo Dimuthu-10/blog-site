@@ -5,11 +5,13 @@ const NewBlog = () => {
     const [title, SetTitle] = useState('');
     const [body, SetBody] = useState('');
     const [author, SetAuthor] = useState('Dimuthu');
+    const [pending, setPending] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const blog = { title, body, author };
+        setPending(true);
 
         fetch('http://localhost:8000/blogs',{
             method : 'POST',
@@ -18,6 +20,7 @@ const NewBlog = () => {
         })
         .then(() =>{
             console.log('data added successfully.');
+            setPending(false);
         })
     }
     return ( 
@@ -59,7 +62,8 @@ const NewBlog = () => {
                     </div>
                    
                     <div className=" d-flex justify-content-center"> 
-                        <button type="submit" className="mt-3 btn btn-dark" >Add Blog</button>
+                        {!pending && <button type="submit" className="mt-3 btn btn-dark" >Add Blog</button>}
+                        {pending && <button disabled className="mt-3 btn btn-dark" >Adding...</button>}
                     </div>
                     
                 </form>
