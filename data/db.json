@@ -17,18 +17,6 @@
       "body": "this is the blog body of the Third blog",
       "author": "Ashen",
       "id": 3
-    },
-    {
-      "title": "development",
-      "body": "development body",
-      "author": "Ashen",
-      "id": 4
-    },
-    {
-      "title": "hello",
-      "body": "this is the body",
-      "author": "Ashen",
-      "id": 5
     }
   ]
 }
