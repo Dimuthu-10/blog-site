@@ -23,9 +23,10 @@ const BlogRead = () => {
             { pending && <div>Loading...</div> }
             { error && <div> { error } </div>}
             { data && (
-                <article>
+                <article className="container">
                     <h2> { data.title } </h2>
                     <div> { data.body } </div>
+                    <br />
                     <p>Written by { data.author } </p>
                     <button onClick={clickHandle} >Delete Blog</button>
                 </article>
