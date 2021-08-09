@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const NewBlog = () => {
 
@@ -6,6 +7,7 @@ const NewBlog = () => {
     const [body, SetBody] = useState('');
     const [author, SetAuthor] = useState('Dimuthu');
     const [pending, setPending] = useState(false);
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,6 +23,7 @@ const NewBlog = () => {
         .then(() =>{
             console.log('data added successfully.');
             setPending(false);
+            history.push("/");
         })
     }
     return ( 
