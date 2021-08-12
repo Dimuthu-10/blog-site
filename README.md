@@ -1,10 +1,10 @@
 # Getting Started with Create React App Project 2
 
-This is a Blog Site that I am also contributing as a Technical Writer. We are team [DataMob](https://datamobteam.blogspot.com/). we are writing Technical Things and Career Development Tips.
+- This is a Blog Site that I am also contributing as a Technical Writer. We are team [DataMob](https://datamobteam.blogspot.com/). we are writing Technical Things and Career Development Tips.
 <br/>
-I am Lerning React framework. i thought it is better to create a platform for us. because we are using [Blogger](https://datamobteam.blogspot.com/) as our platform.
+- I am Lerning React framework. i thought it is better to create a platform for us. because we are using [Blogger](https://datamobteam.blogspot.com/) as our platform.
 <br/>
-React is a new technology to me. day by day I am Getting Familiar with that framework and also i am studying NodeJS as a backend framework these days. i am Trying to develop this site as my best practise.
+- React is a new technology to me. day by day I am Getting Familiar with that framework and also i am studying NodeJS as a backend framework these days. i am Trying to develop this site as my best practise.
 
 ## Methodology
 
