@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const Update = (id) => {
+const Update = () => {
 
     const [title, SetTitle] = useState('');
     const [body, SetBody] = useState('');
