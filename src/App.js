@@ -24,7 +24,7 @@ function App() {
             <Route path= '/blogs/:id'>
               <BlogRead/>
             </Route>
-            <Route path= '/Update'>
+            <Route path= '/Update/:id'>
               <Update/>
             </Route>
             <Route path='*'>
