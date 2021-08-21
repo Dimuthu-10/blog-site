@@ -29,7 +29,7 @@ const BlogRead = () => {
                     <br />
                     <p>Written by { data.author } </p>
                     <button className="btn btn-primary" onClick={clickHandle} >Delete Blog</button>
-                    <Link className="btn btn-primary" to="/Update">Update</Link>
+                    <Link className="btn btn-primary" to={{pathname:`/Update/${id}`}}>Update</Link>
                 </article>
             )}
         </div>
