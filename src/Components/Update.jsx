@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
+
 
 const Update = () => {
 
@@ -9,14 +10,15 @@ const Update = () => {
     const [author, SetAuthor] = useState('Dimuthu');
     const [pending, setPending] = useState(false);
     const history = useHistory();
-
-    const handleSubmit = (e) => {
+    const { id } = useParams();
+    
+    const handleUpdate = (e) => {
         e.preventDefault();
 
         const blog = { title, body, author };
         setPending(true);
 
-        fetch('http://localhost:8000/blogs',{
+        fetch(`http://localhost:8000/blogs/${id}`,{
             method : 'PUT',
             headers : {"Content-type":"application/Json"},
             body : JSON.stringify(blog)
@@ -26,11 +28,13 @@ const Update = () => {
             setPending(false);
             history.push("/");
         })
+        console.log({blog});
     }
+   
     return ( 
         <div className="create container-lg">
             <div className="row">
-                <form onSubmit={handleSubmit} >
+                <form onSubmit={handleUpdate} >
                     <div className="form-group mb-3 k">
                         <label className="title form-label p-2 " htmlFor="Title">Title</label>
                         <input 
