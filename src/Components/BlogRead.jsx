@@ -1,4 +1,4 @@
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import UseFetch from "./useFetch";
 
 const BlogRead = () => {
@@ -28,7 +28,8 @@ const BlogRead = () => {
                     <div> { data.body } </div>
                     <br />
                     <p>Written by { data.author } </p>
-                    <button onClick={clickHandle} >Delete Blog</button>
+                    <button className="btn btn-primary" onClick={clickHandle} >Delete Blog</button>
+                    <Link className="btn btn-primary" to="/Update">Update</Link>
                 </article>
             )}
         </div>
