@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NewBlog from './Components/newBlog';
 import BlogRead from './Components/BlogRead';
 import NotFound from './Components/NotFound';
+import Update from './Components/Update';
 
 
 
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path= '/blogs/:id'>
               <BlogRead/>
+            </Route>
+            <Route path= '/Update'>
+              <Update/>
             </Route>
             <Route path='*'>
               <NotFound />
